@@ -9,7 +9,7 @@ def emailsend(body, receiver):
     mail_user = ""  # 用户名(这里填写你的QQ邮箱,确保你的QQ邮箱开启了SMTP服务!)
     mail_pass = ""  # 口令
 
-    sender = '530064027@qq.com'
+    sender = mail_user
     receivers = [receiver]  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
 
     message = MIMEText(body, 'plain', 'utf-8')
