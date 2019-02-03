@@ -66,6 +66,9 @@ def getgrades(username, password):
                 file.close()
             print("已获取到最新成绩!")
             return datamatch(username)
-        else:  # 登录出现问题,就重复上面的所有过程
+        elif tips == '验证码错误!!':  # 登录出现问题,就重复上面的所有过程
             print('自动填写验证码出错,等待5秒重新获取成绩!')
+            time.sleep(5)
+        elif tips == '用户名或密码错误':
+            print('用户名或密码错误!请退出本程序后重新输入!')
             time.sleep(5)
