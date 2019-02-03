@@ -10,8 +10,6 @@
 
 requests
 
-base64
-
 BeautifulSoup
 
 pytesseract
