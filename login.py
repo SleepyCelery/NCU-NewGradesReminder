@@ -71,4 +71,5 @@ def getgrades(username, password):
             time.sleep(5)
         elif tips == '用户名或密码错误':
             print('用户名或密码错误!请退出本程序后重新输入!')
-            time.sleep(5)
+            print('将在10秒钟后自动退出程序!')
+            time.sleep(10)

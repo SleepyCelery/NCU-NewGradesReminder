@@ -1,6 +1,7 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
+from time import sleep
 
 
 def emailsend(body, receiver):
@@ -30,7 +31,12 @@ def emailsend(body, receiver):
         server.close()
         print('邮件发送成功!')
     except:
-        print('邮件发送失败!')
+        if mail_user == "" or mail_pass == '':
+            print('邮件发送失败,原因是没有填写第三方SMTP服务器的用户名和口令,请在emailsend.py文件中填写好!')
+            print('程序将在10秒钟后自动退出!')
+            sleep(10)
+            exit()
+        print('邮件发送失败!(发生了未知的错误)')
 
 
 def buildtext(username, grades):
