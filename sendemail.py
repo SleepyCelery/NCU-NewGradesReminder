@@ -3,9 +3,9 @@ from email.mime.text import MIMEText
 from email.header import Header
 import time
 
-host_name = 'smtp.qq.com'
-username = '530064027@qq.com'
-token = 'gtcebffisppbbjbb'
+host_name = ''
+username = ''
+token = ''
 
 
 def emailsend(body, receiver, host=host_name, user=username, email_token=token):
